@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_serial/widgets/message_sender.dart';
+import 'package:flutter_serial/widgets/port_details.dart';
 import 'package:flutter_serial/widgets/port_selector.dart';
+import 'package:flutter_serial/widgets/response_board.dart';
 
 
 class SerialPage extends StatelessWidget {
@@ -26,9 +29,10 @@ class SerialPage extends StatelessWidget {
            // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               PortSelector(),
-              Expanded(child: SizedBox()),
-              Expanded(child: SizedBox()),
-              Expanded(child: SizedBox())
+              PortDetails(),
+              MessageSender(),
+              ResponseBoard()
+
             ],
           ),
         ),
